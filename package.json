@@ -4,7 +4,7 @@
   "description": "App that reminds you to drink water",
   "main": "index.js",
   "scripts": {
-    "watch": "nodemon ./start.js"
+    "watch": "nodemon sudo ./start.js"
   },
   "repository": {
     "type": "git",
