@@ -3,7 +3,7 @@ module.exports = function(conn) {
 
     const HOST = process.env.HOST;
 
-    var bcrypt = require('bcrypt');
+    var bcrypt = require('bcryptjs');
 
     const {check, validationResult} = require('express-validator');
     const Validator = require('./backend/util/Validator');

@@ -1,5 +1,5 @@
 module.exports = async function (app, router, conn, inc) {
-    var bcrypt = require('bcrypt');
+    var bcrypt = require('bcryptjs');
     const User = inc.User;
     const Validator = inc.Validator;
 
