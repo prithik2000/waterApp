@@ -1,0 +1,72 @@
+extends ../layout
+
+block head
+    script(src=host + "/js/register.js", type="text/javascript")
+    link(href=host + "/css/loginregister.css", rel="stylesheet")
+block content
+    div.container
+        div.row.justify-content-center
+            div.col-4
+                div.form-signin
+                    div.text-center.mb-4
+                        img.mb-4(
+                            src=host + '/images/logo_large.png'
+                            alt=''
+                            width='80'
+                            height='80'
+                        )
+                        h1.h3.mb-3.font-weight-normal Register for an account
+                    form(
+                        action='',
+                        method='post'
+                    )
+                        div.form-label-group
+                            input#inputEmail.form-control(
+                                type='email'
+                                placeholder='Email'
+                                name='email'
+                                value=''
+                                required
+                            )
+                            label(for='inputEmail') Email Address
+                        div.form-label-group
+                            input#inputUsername.form-control(
+                                type='text'
+                                placeholder='Username'
+                                name='username'
+                                value=''
+                                required
+                            )
+                            label(for='inputUsername') Username
+                        div.form-label-group
+                            input#inputPassword.form-control(
+                                type='password'
+                                placeholder='Password'
+                                name='password'
+                                value=''
+                                required
+                            )
+                            label(for='inputPassword') Password
+                        div.form-label-group
+                            input#inputConfirmPassword.form-control(
+                                type='password'
+                                placeholder='Repeat Password'
+                                name='confirm-password'
+                                value=''
+                                required
+                            )
+                            label(for='inputConfirmPassword') Confirm Password
+                        div.checkbox.mb-3
+                            input(
+                                type='checkbox'
+                                name='rememberme'
+                            )
+                            label Remember Me
+                        button.btn.btn-lg.btn-primary.btn-block(
+                            name='submit'
+                            type='submit'
+                        ) Sign Up
+                    button.btn.btn-lg.btn-secondary.btn-block.mt-2(
+                        type='button'
+                        onclick="window.location.href='" + host + '/login' + "'"
+                    ) Sign In

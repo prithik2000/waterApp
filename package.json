@@ -1,0 +1,37 @@
+{
+  "name": "waterApp",
+  "version": "1.0.0",
+  "description": "App that reminds you to drink water",
+  "main": "index.js",
+  "scripts": {
+    "watch": "nodemon ./start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/prithik2000/waterApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/prithik2000/waterApp/issues"
+  },
+  "homepage": "https://github.com/prithik2000/waterApp#readme",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "body-parser": "^1.19.0",
+    "connect-redis": "^4.0.4",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.4.0",
+    "fs": "0.0.1-security",
+    "mysql2": "^2.1.0",
+    "pug": "^2.0.4",
+    "redis": "^3.0.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

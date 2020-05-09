@@ -1,0 +1,56 @@
+extends ../layout
+
+block head
+    link(href=host + "/css/loginregister.css", rel="stylesheet")
+block content
+    - var username = data ? data.username : ""
+    div.container
+        div.row.justify-content-center
+            div.col-4
+                div.form-signin
+                    div.text-center.mb-4
+                        img.mb-4(
+                            src=host + '/images/logo_large.png',
+                            alt='',
+                            width='80',
+                            height='80'
+                        )
+                        h1.h3.mb-3.font-weight-normal Sign in to MC Admin
+                    if errors && !errors.result
+                        div.text-center.mb-4
+                            label.text-danger The username or password you entered is incorrect. Please try again or reset your password.
+                    form(
+                        action='',
+                        method='post'
+                    )
+                        div.form-label-group
+                            input#inputUsername.form-control(
+                                type='text',
+                                placeholder='Username',
+                                name='username',
+                                value=username,
+                                required,
+                                autofocus
+                            )
+                            label(for='inputUsername') Username
+                        div.form-label-group
+                            input#inputPassword.form-control(
+                                type='password'
+                                placeholder='Password'
+                                name='password'
+                                required
+                            )
+                            label(for='inputPassword') Password
+                        div.checkbox.mb-3
+                            input(type='checkbox', name='rememberme')
+                            label Remember Me
+
+                        button.btn.btn-lg.btn-primary.btn-block(
+                            name='submit'
+                            type='submit'
+                        ) Sign In
+
+                    button.btn.btn-lg.btn-secondary.btn-block.mt-2(
+                        type='button'
+                        onclick="window.location.href='" + host + '/register' + "'"
+                    ) Sign Up
