@@ -1,6 +1,7 @@
 module.exports = function(conn) {
 
     /**
+    * lol
      * User Class
      */
     class User {
